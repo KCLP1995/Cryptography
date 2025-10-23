@@ -189,8 +189,6 @@ func xorEncrypt(mode int) {
 		}
 		encrypted := string(result)
 		
-		// fmt.Printf("\nOriginal: %s\n", text)
-		// fmt.Printf("Key: %d (0x%02x)\n", key, key)
 		fmt.Printf("Encrypted (hex): ")
 		for _, b := range []byte(encrypted) {
 			fmt.Printf("%02x ", b)
@@ -212,8 +210,6 @@ func xorEncrypt(mode int) {
 		}
 		decrypted := string(result)
 		
-		// fmt.Printf("\nCiphertext: %s\n", encryptedText)
-		// fmt.Printf("Key: %d (0x%02x)\n", key, key)
 		fmt.Printf("Decrypted: %s\n", decrypted)
 		
 	case 3:

@@ -22,14 +22,14 @@ func main () {
 		fmt.Scan(&ex)
 		if ex == 1 {
 			//Lab 0
-			Lab0()
+			ProofMe()
 		} else if ex == 2 {
 			//Lab 1
 		}
 	}
 }
 
-func Lab0 () {
+func ProofMe () {
 	fmt.Println("===== Hashing Plain text =====")
 	fmt.Print("Please input 1st plain text: ")
 	fmt.Scan(&Input1)
