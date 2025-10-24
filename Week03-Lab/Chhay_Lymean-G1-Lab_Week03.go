@@ -8,6 +8,7 @@ import (
 	"crypto/sha512"
 	"fmt"
 	"os"
+	"github.com/KCLP1995/Cryptography/utils/crack" 
 )
 
 var ex int
@@ -17,14 +18,32 @@ var choice int
 func main () {
 	
 	for {
-		fmt.Println("1. Exercise 01 \n2. Exercise 02 \n3. Exercise 03 \n4. Exercise 04 \n5. Exercise 05")
+		fmt.Println("0. Exercise 0 \n1. Exercise 01 \n2. Exercise 02 \n3. Exercise 03 \n4. Exit")
 		fmt.Print("Please choose exercise: ")
 		fmt.Scan(&ex)
-		if ex == 1 {
+		switch ex {
+		case 0:
 			//Lab 0
 			ProofMe()
-		} else if ex == 2 {
+		case 1:
 			//Lab 1
+			if err := crack.MD5Cracking("wordlist/nord_vpn.txt", "verbose.txt"); err != nil {
+				fmt.Println("Error:", err)
+			}
+		case 2:
+			//Lab 2
+			if err := crack.Sha1Cracking("wordlist/nord_vpn.txt", "verbose.txt"); err != nil {
+				fmt.Println("Error:", err)
+			}
+		case 3:
+			//Lab 3
+			if err := crack.Sha512Cracking("wordlist/nord_vpn.txt", "verbose.txt"); err != nil {
+				fmt.Println("Error:", err)
+			}
+		case 4:
+			os.Exit(0)
+		default:
+			fmt.Println("Invalid Program")
 		}
 	}
 }
@@ -94,8 +113,4 @@ func ProofMe () {
 	default:
 		fmt.Println("Invalid option")
 	}
-}
-
-func Lab1 () {
-
 }
