@@ -41,7 +41,7 @@ def validate_username(username):
     return bool(re.match(pattern, username))
 
 def validate_password(password):
-    pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{9,}$"
+    pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
     return bool(re.match(pattern, password))
 
 def validate_pet_color(petColor):
