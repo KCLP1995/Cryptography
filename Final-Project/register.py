@@ -9,6 +9,7 @@ RED = '\033[91m'
 YELLOW = '\033[33m'
 BLUE = '\033[94m'
 RESET = '\033[0m'
+GREEN = '\033[92m'
 
 # -----------------------------
 # MASKED INPUT (FIRST LETTER VISIBLE)
