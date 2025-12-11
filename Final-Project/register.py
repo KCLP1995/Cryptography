@@ -168,6 +168,9 @@ def Register():
     else:
         print(f"{RED}Maximum attempts reached. Exiting.{RESET}")
         return
+    
+    print(f"\n{GREEN}You have been successfully create your account!.{RESET}")
+    input("Press Any Key To Continue")
 
     # ---- Auto ID & Save ----
     user_id = get_next_id()
